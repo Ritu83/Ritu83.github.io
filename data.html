@@ -1,0 +1,39 @@
+ var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+
+
+ var request = new XMLHttpRequest();
+
+ request.open('GET', requestURL);
+
+ request.responseType = 'json';
+ request.send();
+
+
+ request.onload = function() {
+ var requestData = request.response;
+console.log(requestData);
+
+var requestData, i, j, x = "";
+requestData = {
+  "name":"",
+  "age":,
+  "members": [
+    {"name":"Mike", "details":["SuperSquad", "30", "Secret Agent"]},
+    {"name":"ken", "details":["super", "26", "hometown"]},
+    {"name":"Flen", "details":["500", "Panda"] }
+
+
+for (i in requestData.members) {
+  x += "<h2>" + requestData.members[i].name + "</h2>";
+  for (j in requestData.members[i].age) {
+    x += requestData[i].occupation[j] + "<br>";
+  }
+}
+document.getElementById("demo").innerHTML = x;
+
+
+ 
+ 
+	  
+	  
+	  
